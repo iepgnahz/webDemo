@@ -9,7 +9,7 @@ module.exports = {
   output: {
     path: "./public/dist",
     filename: "[name].js",
-    publicPath: "./public"
+    publicPath: "."
   },
   module: {
     loaders: [
@@ -18,7 +18,7 @@ module.exports = {
         loader: "babel",
         exclude: /node_modules/,
         query: {
-          presets: "es2015"
+          presets: ["es2015", "react"]
         }
       },
       {

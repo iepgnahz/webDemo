@@ -1,0 +1,55 @@
+.selectionList{
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  background-color: #eee;
+  color: #7B8585;
+  padding: 10px;
+  border-top: 1px #7B8585 solid;
+  border-bottom: 2px #7B8585 solid;
+  border-right: 1px #7B8585 solid;
+}
+
+li{
+  float: left;
+}
+
+.firstItem{
+  border-left: 1px #7B8585 solid;
+}
+
+
+
+.box{
+  position: absolute;
+  left:0;
+  top:0;
+  width: 20%;
+
+  transition: left 0.5S;
+  color: rgb(255,255,255);
+  text-align: center;
+  cursor: pointer;
+  background-color: rgb(225,86,113);
+  padding: 10px;
+  border: 1px #7B8585 solid;
+  border-bottom: 0;
+}
+
+.body{
+  margin:auto;
+  width:800px;
+  position: relative;
+}
+
+.text-div{
+  height:300px;
+  border: 1px #7B8585 solid;
+  border-top: 0;
+}
+
+li{
+  width: 20%;
+}
+
+

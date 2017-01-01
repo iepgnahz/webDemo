@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const path = require('path');
 const node_modules = path.resolve(__dirname, 'node_modules');
@@ -8,7 +9,7 @@ const font_awesome = path.resolve(node_modules, 'font-awesome/css/font-awesome.c
 
 module.exports = {
   entry: {
-    index: ['./public/src/App.js', './public/src/style/index.css'],
+    index: ['./public/src/index.js'],
     vendors: ['react', 'react-dom', bootstrap, font_awesome]
   },
   output: {
@@ -39,9 +40,12 @@ module.exports = {
       }
     ]
   },
-  devtool: "#cheap-source-map",
+
   plugins: [
     new ExtractTextPlugin("[name].css"),
-    new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.bundle.js")
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname,'public/index.html')
+    }),
+    new webpack.optimize.CommonsChunkPlugin("vendors", "vendor.bundle.js")
   ]
 };

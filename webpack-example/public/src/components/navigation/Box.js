@@ -6,12 +6,18 @@ export default class Box extends Component {
     super(props);
   }
 
+  componentDidMount(){
+    this.box.addEventListener('webkitAnimationEnd', this.props.stop, false);
+  }
+
   render() {
     let style = {
       left: `${this.props.focus*20}%`
     };
     return (
-      <div className={'box '+this.props.classTest} style={style} >
+      <div ref={(ref)=>{
+        this.box = ref
+      }} className={'box '+(this.props.over?'animated shake':'')} style={style}>
         {this.props.text}
       </div>
     )

@@ -8,7 +8,7 @@ export default class Demo extends Component {
   render() {
     return (
       <div>
-        <h1>zhangpei</h1>
+        <h1 className="animated bounce infinite" id="body">zhangpei</h1>
       </div>
     )
   }

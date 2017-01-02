@@ -7,7 +7,7 @@ export default class SelectionList extends Component {
 
   render() {
     return (
-      <div className={'selectionList '+this.props.class} onMouseOver={this.props.focus}>
+      <div className={'selectionList '+this.props.classTest} onMouseOver={this.props.focus} >
         {this.props.text}
       </div>
     )

@@ -8,7 +8,6 @@ const textItems = [
   'about',
   'concat us',
   '首页'
-
 ];
 
 export default class Navigation extends Component {
@@ -16,29 +15,35 @@ export default class Navigation extends Component {
     super(props);
     this.state={
       focus:0,
-      text:'home'
+      text:'home',
+      over: false
     }
   }
 
-  focus(){
+  end(){
+    console.log(
+      '0000'
+    );
     this.setState({
-
+      over:false
     })
   }
 
   render() {
+    console.log(this.state.over)
     return (
       <div className='body'>
-        <Box text={this.state.text} focus={this.state.focus}/>
+        <Box text={this.state.text} focus={this.state.focus} over={this.state.over} stop={this.end.bind(this)}/>
         <ul>
           {
             textItems.map((list,index)=>(
-              <li key={index}><SelectionList text={list} class={index === 0 ? 'firstItem' : ''} focus={()=>{
+              <li key={index}><SelectionList text={list} classTest={(index === 0 ? 'firstItem' : '') } focus={()=>{
                 this.setState({
                   focus:index,
-                  text:list
+                  text:list,
+                  over:true
                 })
-              }}/></li>))
+              }} /></li>))
           }
         </ul>
       </div>

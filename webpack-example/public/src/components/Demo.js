@@ -1,15 +1,28 @@
 import React, {Component} from 'react';
-
+import Rotation from 'react-rotation';
 export default class Demo extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      value: ''
+    }
   }
 
-  render() {
+  render(){
     return (
       <div>
-        <h1 className="animated bounce infinite" id="body">zhangpei</h1>
+        <input type="text"  onChange={(e)=>{
+
+          this.setState({
+            value:e.target.value
+          })
+        }}/>
+
+        <div >
+          {this.state.value}
+        </div>
       </div>
     )
   }
+
 }

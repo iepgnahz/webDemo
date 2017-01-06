@@ -9,6 +9,11 @@ import SelectionQuestion from './components/select-question/index';
 import MyApp from './components/react-dnd/MyApp';
 import DragDiv from './components/drag/DragDiv';
 import FormDemo from './components/form-demo/FormDemo';
+import CheckBoxDemo from './components/form-demo/CheckBoxDemo';
+import ChangeEvent from './components/some-forms-with-one-change-handle/Forms';
+import SelfForms from './components/self-form/SelfForms';
+import ControlledSelfForms from './components/self-form/ControlledSelfForms';
+import FlashDiv from './components/ComponentFlash/FlashDiv';
 class App extends Component{
   render(){
     return (
@@ -21,6 +26,11 @@ class App extends Component{
         <Route path="drag" component={MyApp} />
         <Route path="dragDiv" component={DragDiv} />
         <Route path="FormDemo" component={FormDemo} />
+        <Route path="checkBoxDemo" component={CheckBoxDemo}/>
+        <Route path='changeEvent' component={ChangeEvent}/>
+        <Route path='selfForms' component={SelfForms}/>
+        <Route path='controlledForm' component={ControlledSelfForms}/>
+        <Route path='flashDiv' component={FlashDiv}/>
       </Router>
 
     )

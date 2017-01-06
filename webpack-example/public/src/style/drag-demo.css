@@ -1,0 +1,11 @@
+.drag{
+  width: 200px;
+  height:200px;
+  position: absolute;
+  left:0px;
+  top:0;
+  border: 1px solid red;
+  border-radius: 1%;
+  background-color: #66afe9;
+  cursor: all-scroll;
+}
